@@ -1,3 +1,5 @@
+
+
 function Card1(){
     let items=[
         {
@@ -1491,27 +1493,43 @@ function Card1(){
                 }
             ]
         }
+
     ] 
+
+    let styles ={
+        display:"flex",
+        flexWrap:"wrap",
+        justifyContent:"space-evenly",
+        marginTop:"2em"
+
+        
+      
+    };
+    
+
     return(
-        <>
+        < >
+        
+        <div style={styles}> 
+        
           {items.map((items,index)=>(
-            <div className="card" style={{ width: "18rem" }}>
-            <img src={items.collage_image} className="card-img-top" alt="..." />
-            <div className="card-body">
-              <h5 className="card-title">Card title</h5>
+            <div className="card"  style={{ width: "18rem" }}>
+            <img src={items.collage_image} className="card-img-top" alt="..."  />
+            <div className="card-body"  >
+              <h5 className="card-title">category-{items.type}</h5>
               <p className="card-text">
                 Some quick example text to build on the card title and make up the bulk of
                 the card's content.
               </p>
               <a href="#" className="btn btn-primary">
-                Go somewhere
+                Buy Now
               </a>
             </div>
           </div>
           
 
           ))}
-
+     </div>
         </>
     )
 }
